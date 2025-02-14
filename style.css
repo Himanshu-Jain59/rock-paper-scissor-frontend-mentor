@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 90vh;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.header {
+  padding: 1.5rem;
+  margin: 2rem 23%;
+  border: 0.2rem solid hsl(217, 16%, 45%);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.scoreboard {
+  font-size: large;
+  color: hsl(229, 64%, 46%);
+  background-color: white;
+  border-radius: 0.4rem;
+  padding: 0.7rem 2rem;
+  height: 4rem;
+  text-align: center;
+}
+.score {
+  font-weight: 600;
+  font-size: 3rem;
+  color: hsl(229, 25%, 31%);
+}
+.game {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.paper {
+  height: 8rem;
+  width: 8rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1rem solid hsl(230, 89%, 62%);
+  position: absolute;
+  top: 37%;
+  right: 53%;
+}
+.rock {
+  height: 8rem;
+  width: 8rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1rem solid hsl(349, 71%, 52%);
+  position: absolute;
+  top: 69%;
+  right: 44%;
+}
+.scissors {
+  height: 8rem;
+  width: 8rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1rem solid hsl(39, 89%, 49%);
+  position: absolute;
+  top: 37%;
+  left: 53%;
+}
+
+.footer {
+  margin: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 0.15rem solid hsl(217, 16%, 45%);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: medium;
+  background-color: transparent;
+}
+
+.attribution {
+  background-color: white;
+  text-align: center;
+}
