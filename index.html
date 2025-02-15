@@ -40,10 +40,20 @@
           <img src="./images/icon-rock.svg" alt="" />
         </div>
       </div>
-      <div class="gamestart">
-        <div class="user"></div>
-        <div class="result"></div>
-        <div class="cpu"></div>
+      <div class="gameplay">
+        <div class="box">
+          YOU PICKED
+          <div class="user picked"></div>
+        </div>
+        <div class="box result">
+          YOU WIN
+          <br />
+          <button id="playagain">PLAY AGAIN</button>
+        </div>
+        <div class="box">
+          THE HOUSE PICKED
+          <div class="cpu picked"></div>
+        </div>
       </div>
       <div class="footer">
         <button id="mode">MODE</button>
@@ -60,5 +70,6 @@
         >Himanshu Jain </a
       >.
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

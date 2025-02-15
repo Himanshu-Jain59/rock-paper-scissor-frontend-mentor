@@ -37,9 +37,8 @@ body {
   color: hsl(229, 25%, 31%);
 }
 .game {
-  display: none;
   padding: 5rem;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: flex-end;
 }
@@ -102,8 +101,73 @@ button {
 }
 
 .attribution {
+  position: relative;
+  bottom: 0;
+  width: 100%;
   background-color: white;
   text-align: center;
 }
 
-/* game start */
+/* game play */
+
+.gameplay {
+  font-family: Barlow;
+  margin: 4rem 0;
+  height: 20rem;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: x-large;
+  color: white;
+}
+
+.result {
+  font-size: 3rem;
+  font-weight: 700;
+}
+#playagain {
+  background: white;
+  border: none;
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+  font-size: medium;
+  padding: 1rem 4rem;
+}
+#playagain:hover {
+  color: hsl(349, 71%, 52%);
+}
+
+.picked {
+  height: 13rem;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 50%;
+  border: 2rem solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 6rem;
+}
+
+.user {
+  background-image: url("./images/icon-paper.svg");
+  border-color: hsl(230, 89%, 62%);
+}
+.cpu {
+  background-image: url("./images/icon-rock.svg");
+  border-color: hsl(349, 71%, 52%);
+}
