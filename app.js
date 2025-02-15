@@ -9,6 +9,8 @@ const user = document.querySelector(".user");
 const cpu = document.querySelector(".cpu");
 const result = document.querySelector(".result p");
 const score = document.querySelector(".score");
+const rules = document.querySelector("#rules");
+const myDialog = document.getElementById("popup");
 
 const signs = ["rock", "paper", "scissor"];
 let userscore = 0;
@@ -46,7 +48,7 @@ function winner(player) {
       result.innerHTML = "YOU WIN";
     }
   }
-  setTimeout(updateScore, 7000);
+  setTimeout(updateScore, 6000);
 }
 
 function updateScore() {
@@ -63,11 +65,20 @@ function changeImg(player, computer) {
   cpu.style.borderColor = `var(--${computer})`;
 }
 
+function closeDialog(event) {
+  if (!event.target.contains(myDialog)) return;
+  myDialog.close();
+}
+
+rules.addEventListener("click", () => myDialog.showModal());
+document.addEventListener("click", closeDialog);
+
 playagain.addEventListener("click", () => {
   game.style.display = "flex";
   footer.style.display = "flex";
   gameplay.style.display = "none";
 });
+
 paper.addEventListener("click", () => {
   winner(signs[1]);
   start();

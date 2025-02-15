@@ -163,7 +163,7 @@ button {
   opacity: 0;
   animation-name: result;
   animation-duration: 2s;
-  animation-delay: 6s;
+  animation-delay: 5s;
   animation-fill-mode: forwards;
 }
 
@@ -220,4 +220,26 @@ button {
   100% {
     opacity: 1;
   }
+}
+
+/* rules */
+
+#popup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: x-large;
+  background-color: white;
+  transition: 0.5s;
+}
+#popup::backdrop {
+  opacity: 0.5;
+  background: #000;
 }
