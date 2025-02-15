@@ -131,22 +131,6 @@ button {
   color: white;
 }
 
-.result {
-  font-size: 3rem;
-  font-weight: 700;
-}
-#playagain {
-  background: white;
-  border: none;
-  color: hsl(229, 25%, 31%);
-  font-weight: 700;
-  font-size: medium;
-  padding: 1rem 4rem;
-}
-#playagain:hover {
-  color: hsl(349, 71%, 52%);
-}
-
 .picked {
   height: 13rem;
   aspect-ratio: 1;
@@ -163,11 +147,68 @@ button {
   background-size: 6rem;
 }
 
+.result {
+  font-size: 3rem;
+  font-weight: 700;
+  opacity: 0;
+  animation-name: result;
+  animation-duration: 2s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+#playagain {
+  background: white;
+  border: none;
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+  font-size: medium;
+  padding: 1rem 4rem;
+}
+#playagain:hover {
+  color: hsl(349, 71%, 52%);
+}
+
 .user {
   background-image: url("./images/icon-paper.svg");
   border-color: hsl(230, 89%, 62%);
+  opacity: 0;
+  animation-name: startgame;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
 }
 .cpu {
+  background-color: #3b4262;
+  border-color: #3b4262;
   background-image: url("./images/icon-rock.svg");
-  border-color: hsl(349, 71%, 52%);
+  opacity: 0;
+  animation-name: startgame;
+  animation-delay: 2s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+/* animations */
+@keyframes startgame {
+  0% {
+    background-color: #3b4262;
+    border-color: #3b4262;
+  }
+  50% {
+    background-color: #3b4262;
+    border-color: #3b4262;
+  }
+  100% {
+    opacity: 1;
+    background-color: white;
+    border-color: hsl(349, 71%, 52%);
+  }
+}
+
+@keyframes result {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
