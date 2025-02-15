@@ -148,6 +148,10 @@ button {
 }
 
 .result {
+  height: 5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: white;
   font-size: 3rem;
   font-weight: 700;
   opacity: 0;
