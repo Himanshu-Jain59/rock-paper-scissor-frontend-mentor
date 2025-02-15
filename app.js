@@ -30,27 +30,30 @@ function winner(player) {
       result.innerHTML = "YOU LOSE";
     } else {
       result.innerHTML = "YOU WIN";
-      userscore += 1;
-      score.innerHTML = userscore;
     }
   } else if (player == "scissor") {
     if (computer == "rock") {
       result.innerHTML = "YOU LOSE";
     } else {
       result.innerHTML = "YOU WIN";
-      userscore += 1;
-      score.innerHTML = userscore;
     }
   } else if (player == "paper") {
     if (computer == "scissor") {
       result.innerHTML = "YOU LOSE";
     } else {
       result.innerHTML = "YOU WIN";
-      userscore += 1;
-      score.innerHTML = userscore;
     }
   }
+  setTimeout(updatescore, 7000);
 }
+
+function updatescore() {
+  if (result.innerHTML == "YOU WIN") {
+    userscore += 1;
+    score.innerHTML = userscore;
+  }
+}
+
 playagain.addEventListener("click", () => {
   game.style.display = "flex";
   footer.style.display = "flex";
