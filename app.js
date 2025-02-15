@@ -8,6 +8,7 @@ const playagain = document.querySelector("#playagain");
 const user = document.querySelector(".user");
 const cpu = document.querySelector(".cpu");
 const result = document.querySelector(".result p");
+const score = document.querySelector(".score");
 
 const signs = ["rock", "paper", "scissor"];
 let userscore = 0;
@@ -29,18 +30,24 @@ function winner(player) {
       result.innerHTML = "YOU LOSE";
     } else {
       result.innerHTML = "YOU WIN";
+      userscore += 1;
+      score.innerHTML = userscore;
     }
   } else if (player == "scissor") {
     if (computer == "rock") {
       result.innerHTML = "YOU LOSE";
     } else {
       result.innerHTML = "YOU WIN";
+      userscore += 1;
+      score.innerHTML = userscore;
     }
   } else if (player == "paper") {
     if (computer == "scissor") {
       result.innerHTML = "YOU LOSE";
     } else {
       result.innerHTML = "YOU WIN";
+      userscore += 1;
+      score.innerHTML = userscore;
     }
   }
 }
