@@ -23,6 +23,8 @@ function winner(player) {
   let computer = signs[Math.floor(Math.random() * 2)];
   console.log(player, computer);
 
+  changeImg(player, computer);
+
   if (player == computer) {
     result.innerHTML = "MATCH DRAW";
   } else if (player == "rock") {
@@ -44,14 +46,21 @@ function winner(player) {
       result.innerHTML = "YOU WIN";
     }
   }
-  setTimeout(updatescore, 7000);
+  setTimeout(updateScore, 7000);
 }
 
-function updatescore() {
+function updateScore() {
   if (result.innerHTML == "YOU WIN") {
     userscore += 1;
     score.innerHTML = userscore;
   }
+}
+
+function changeImg(player, computer) {
+  user.style.backgroundImage = `url(./images/icon-${player}.svg)`;
+  user.style.borderColor = `var(--${player})`;
+  cpu.style.backgroundImage = `url(./images/icon-${computer}.svg)`;
+  cpu.style.borderColor = `var(--${computer})`;
 }
 
 playagain.addEventListener("click", () => {
@@ -64,10 +73,10 @@ paper.addEventListener("click", () => {
   start();
 });
 scissor.addEventListener("click", () => {
-  winner(signs[0]);
+  winner(signs[2]);
   start();
 });
 rock.addEventListener("click", () => {
-  winner(signs[2]);
+  winner(signs[0]);
   start();
 });
