@@ -54,8 +54,10 @@ function winner(player) {
 function updateScore() {
   if (result.innerHTML == "YOU WIN") {
     userscore += 1;
-    score.innerHTML = userscore;
+  } else if (result.innerHTML == "YOU LOSE" && userscore > 0) {
+    userscore -= 1;
   }
+  score.innerHTML = userscore;
 }
 
 function changeImg(player, computer) {
