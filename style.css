@@ -12,13 +12,23 @@
   font-family: Barlow;
 }
 body {
-  height: 90vh;
+  height: auto;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
 .header {
+  max-width: 44rem;
+  width: 80%;
   padding: 1.5rem;
-  margin: 2rem 23%;
+  margin: 2rem 0;
   border: 0.2rem solid hsl(217, 16%, 45%);
   border-radius: 1rem;
   display: flex;
@@ -32,6 +42,7 @@ body {
   border-radius: 0.4rem;
   padding: 0.7rem 2rem;
   height: 4.5rem;
+  width: 4rem;
   text-align: center;
   font-family: Barlow;
   font-weight: 600;
@@ -49,9 +60,17 @@ body {
   align-items: flex-end;
 }
 
+.game button {
+  position: absolute;
+}
+
+.game button img {
+  height: 5rem;
+}
+
 .paper {
-  height: 8rem;
-  width: 8rem;
+  height: 10rem;
+  width: 10rem;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -64,10 +83,11 @@ body {
 }
 
 .scissors {
-  height: 8rem;
-  width: 8rem;
+  height: 10rem;
+  width: 10rem;
   background-color: white;
   display: flex;
+
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -78,21 +98,25 @@ body {
 }
 
 .rock {
-  height: 8rem;
-  width: 8rem;
+  height: 10rem;
+  width: 10rem;
   background-color: white;
+  margin-inline: auto;
   display: flex;
+
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   border: 1rem solid var(--rock);
   position: absolute;
   top: 69%;
-  right: 44%;
-  left: 44%;
+  right: 0%;
+  left: 0%;
 }
+
 .footer {
   margin: 1rem 2rem;
+  width: 90%;
   display: flex;
   justify-content: space-between;
 }
@@ -107,11 +131,10 @@ button {
 }
 
 .attribution {
-  position: relative;
-  bottom: 0;
   width: 100%;
   background-color: white;
   text-align: center;
+  margin-top: 1rem;
 }
 
 /* game play */
@@ -245,9 +268,12 @@ button {
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
+  body main {
+    justify-content: space-between;
+  }
   .header {
     padding: 1.5rem 1rem;
-    margin: 2rem 10%;
+    margin: 1rem 0;
   }
   .header img {
     height: 5rem;
@@ -265,17 +291,19 @@ button {
   .game {
     padding: 2rem;
   }
+  .game button img {
+    height: 2rem;
+  }
 
   #triangle {
-    height: 13rem;
-    aspect-ratio: 1;
+    height: 9rem;
   }
 
   .paper {
     height: 5rem;
     width: 5rem;
 
-    top: 38%;
+    top: 35%;
     right: 55%;
   }
 
@@ -283,7 +311,7 @@ button {
     height: 5rem;
     width: 5rem;
 
-    top: 38%;
+    top: 35%;
     left: 55%;
   }
 
@@ -291,7 +319,7 @@ button {
     height: 5rem;
     width: 5rem;
 
-    top: 62%;
+    top: 52%;
     right: 33%;
     left: 33%;
   }

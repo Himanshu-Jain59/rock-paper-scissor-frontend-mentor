@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="cointainer">
+    <main>
       <div class="header">
         <img src="./images/logo.svg" alt="" />
         <div class="scoreboard">
@@ -30,15 +30,15 @@
       </div>
       <div class="game">
         <img src="./images/bg-triangle.svg" alt="bg" id="triangle" />
-        <div class="paper">
+        <button class="paper">
           <img src="./images/icon-paper.svg" alt="" />
-        </div>
-        <div class="scissors">
+        </button>
+        <button class="scissors">
           <img src="./images/icon-scissor.svg" alt="" />
-        </div>
-        <div class="rock">
+        </button>
+        <button class="rock">
           <img src="./images/icon-rock.svg" alt="" />
-        </div>
+        </button>
       </div>
       <div class="gameplay">
         <div class="box">
@@ -58,22 +58,24 @@
         <button id="mode">MODE</button>
         <button id="rules">RULES</button>
       </div>
-    </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/Himanshu-Jain59" target="_blank"
+          >Himanshu Jain </a
+        >.
+      </div>
+    </main>
+
     <dialog id="popup">
       RULES
       <br />
       <br />
       <img src="./images/image-rules.svg" alt="" />
     </dialog>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://github.com/Himanshu-Jain59" target="_blank"
-        >Himanshu Jain </a
-      >.
-    </div>
     <script src="app.js"></script>
   </body>
 </html>
