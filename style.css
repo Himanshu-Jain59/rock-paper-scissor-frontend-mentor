@@ -12,23 +12,23 @@
   font-family: Barlow;
 }
 body {
-  height: auto;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 body main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   overflow: hidden;
   min-height: 100vh;
+  gap: 1rem;
 }
 
 .header {
   max-width: 44rem;
   width: 80%;
   padding: 1.5rem;
-  margin: 2rem 0;
+  margin-top: 1rem;
   border: 0.2rem solid hsl(217, 16%, 45%);
   border-radius: 1rem;
   display: flex;
@@ -78,7 +78,7 @@ body main {
   border-radius: 50%;
   border: 1rem solid var(--paper);
   position: absolute;
-  top: 37%;
+  top: 35%;
   right: 53%;
 }
 
@@ -93,7 +93,7 @@ body main {
   border-radius: 50%;
   border: 1rem solid var(--scissor);
   position: absolute;
-  top: 37%;
+  top: 35%;
   left: 53%;
 }
 
@@ -109,13 +109,12 @@ body main {
   border-radius: 50%;
   border: 1rem solid var(--rock);
   position: absolute;
-  top: 69%;
+  top: 65%;
   right: 0%;
   left: 0%;
 }
 
 .footer {
-  margin: 1rem 2rem;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -134,7 +133,6 @@ button {
   width: 100%;
   background-color: white;
   text-align: center;
-  margin-top: 1rem;
 }
 
 /* game play */
@@ -270,6 +268,8 @@ button {
 @media (min-width: 320px) and (max-width: 425px) {
   body main {
     justify-content: space-between;
+    min-height: 93vh;
+    gap: 0;
   }
   .header {
     padding: 1.5rem 1rem;
@@ -296,7 +296,7 @@ button {
   }
 
   #triangle {
-    height: 9rem;
+    height: 10rem;
   }
 
   .paper {
@@ -328,62 +328,48 @@ button {
 
   .gameplay {
     font-family: Barlow;
-    margin: 4rem 0;
-    height: 20rem;
+    margin: 0;
+    height: fit-content;
     width: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
+
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+    gap: 2rem;
   }
   .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     font-weight: 600;
     font-size: x-large;
     color: white;
   }
 
   .picked {
-    height: 13rem;
+    height: 4rem;
     aspect-ratio: 1;
     background-color: white;
     border-radius: 50%;
-    border: 2rem solid;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1rem solid;
 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 6rem;
+    background-size: 2rem;
   }
 
   .result {
-    height: 5rem;
+    height: 3rem;
     padding-bottom: 2rem;
-    text-align: center;
-    color: white;
-    font-size: 3rem;
-    font-weight: 700;
-    opacity: 0;
-    animation-name: result;
-    animation-duration: 2s;
-    animation-delay: 5s;
-    animation-fill-mode: forwards;
+
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   #playagain {
-    background: white;
-    border: none;
-    color: hsl(229, 25%, 31%);
-    font-weight: 700;
-    font-size: medium;
-    padding: 1rem 4rem;
+    padding: 0.6rem 2rem;
   }
   #playagain:hover {
     color: var(--rock);
