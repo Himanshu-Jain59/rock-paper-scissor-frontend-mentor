@@ -243,3 +243,173 @@ button {
   opacity: 0.5;
   background: #000;
 }
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .header {
+    padding: 1.5rem 1rem;
+    margin: 2rem 10%;
+  }
+  .header img {
+    height: 5rem;
+    /* aspect-ratio: 1; */
+  }
+  .scoreboard {
+    font-size: medium;
+
+    padding: 0.7rem 1rem;
+    height: 4rem;
+  }
+  .score {
+    font-size: 2rem;
+  }
+  .game {
+    padding: 2rem;
+  }
+
+  #triangle {
+    height: 13rem;
+    aspect-ratio: 1;
+  }
+
+  .paper {
+    height: 5rem;
+    width: 5rem;
+
+    top: 38%;
+    right: 55%;
+  }
+
+  .scissors {
+    height: 5rem;
+    width: 5rem;
+
+    top: 38%;
+    left: 55%;
+  }
+
+  .rock {
+    height: 5rem;
+    width: 5rem;
+
+    top: 62%;
+    right: 33%;
+    left: 33%;
+  }
+
+  /* game play */
+
+  .gameplay {
+    font-family: Barlow;
+    margin: 4rem 0;
+    height: 20rem;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+    font-size: x-large;
+    color: white;
+  }
+
+  .picked {
+    height: 13rem;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    border: 2rem solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 6rem;
+  }
+
+  .result {
+    height: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    opacity: 0;
+    animation-name: result;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+
+  #playagain {
+    background: white;
+    border: none;
+    color: hsl(229, 25%, 31%);
+    font-weight: 700;
+    font-size: medium;
+    padding: 1rem 4rem;
+  }
+  #playagain:hover {
+    color: var(--rock);
+  }
+
+  .user {
+    background-image: url("./images/icon-paper.svg");
+    border-color: var(--paper);
+    opacity: 0;
+    animation-name: startgame;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+  }
+  .cpu {
+    background-color: #3b4262;
+    border-color: #3b4262;
+    background-image: url("./images/icon-rock.svg");
+    opacity: 0;
+    animation-name: startgame;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+  }
+  /* animations */
+  @keyframes startgame {
+    0% {
+      background-color: #3b4262;
+      border-color: #3b4262;
+    }
+    50% {
+      background-color: #3b4262;
+      border-color: #3b4262;
+    }
+    100% {
+      opacity: 1;
+      background-color: white;
+    }
+  }
+
+  @keyframes result {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* rules */
+
+  #popup {
+    padding: 1rem;
+  }
+  #popup img {
+    height: 13rem;
+  }
+}
