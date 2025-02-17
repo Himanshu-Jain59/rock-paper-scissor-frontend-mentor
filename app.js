@@ -23,7 +23,6 @@ const start = () => {
 
 function winner(player) {
   let computer = signs[Math.floor(Math.random() * 2)];
-  console.log(player, computer);
 
   changeImg(player, computer);
 
