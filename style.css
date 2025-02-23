@@ -140,8 +140,9 @@ button {
 .gameplay {
   font-family: Barlow;
   margin: 4rem 0;
+  padding: 0 2rem;
   height: 20rem;
-  width: 100%;
+  width: 80%;
   display: none;
   justify-content: center;
   align-items: center;
@@ -159,11 +160,11 @@ button {
 }
 
 .picked {
-  height: 13rem;
+  width: clamp(4rem, 20vw, 13rem);
   aspect-ratio: 1;
   background-color: white;
   border-radius: 50%;
-  border: 2rem solid;
+  border: clamp(1rem, 4vh, 2rem) solid;
 
   display: flex;
   justify-content: center;
@@ -175,11 +176,11 @@ button {
 }
 
 .result {
-  height: 5rem;
+  height: clamp(2rem, 20vh, 5rem);
   padding-bottom: 2rem;
   text-align: center;
   color: white;
-  font-size: 3rem;
+  font-size: clamp(2rem, 10vh, 3rem);
   font-weight: 700;
   opacity: 0;
   animation-name: result;
@@ -194,7 +195,7 @@ button {
   color: hsl(229, 25%, 31%);
   font-weight: 700;
   font-size: medium;
-  padding: 1rem 4rem;
+  padding: clamp(0.6rem, 3vw, 1rem) clamp(1rem, 5vw, 4rem);
 }
 #playagain:hover {
   color: var(--rock);
@@ -331,32 +332,16 @@ button {
     margin: 0;
     height: fit-content;
     width: 100%;
-
     flex-direction: column;
-    /* justify-content: space-between; */
-
     gap: 2rem;
   }
   .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-    font-weight: 600;
-    font-size: x-large;
-    color: white;
   }
 
   .picked {
-    height: 4rem;
-    aspect-ratio: 1;
-    background-color: white;
-    border-radius: 50%;
+    /* height: 4rem; */
     border: 1rem solid;
-
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 2rem;
   }
 
@@ -371,55 +356,8 @@ button {
   #playagain {
     padding: 0.6rem 2rem;
   }
-  #playagain:hover {
-    color: var(--rock);
-  }
-
-  .user {
-    background-image: url("./images/icon-paper.svg");
-    border-color: var(--paper);
-    opacity: 0;
-    animation-name: startgame;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-  }
-  .cpu {
-    background-color: #3b4262;
-    border-color: #3b4262;
-    background-image: url("./images/icon-rock.svg");
-    opacity: 0;
-    animation-name: startgame;
-    animation-delay: 2s;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-  }
-  /* animations */
-  @keyframes startgame {
-    0% {
-      background-color: #3b4262;
-      border-color: #3b4262;
-    }
-    50% {
-      background-color: #3b4262;
-      border-color: #3b4262;
-    }
-    100% {
-      opacity: 1;
-      background-color: white;
-    }
-  }
-
-  @keyframes result {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
   /* rules */
-
   #popup {
     padding: 1rem;
   }
@@ -427,3 +365,22 @@ button {
     height: 13rem;
   }
 }
+
+/* @media (min-width: 425px) and (max-width: 900px) {
+  .gameplay {
+    font-family: Barlow;
+    margin: 0;
+    height: fit-content;
+    width: 90%;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .result {
+    height: 3rem;
+    padding-bottom: 2rem;
+
+    font-size: 2rem;
+    font-weight: 600;
+  }
+} */
