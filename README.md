@@ -56,7 +56,7 @@ I will continue to make it more responsive.
 ## Author
 
 - Frontend Mentor - [@Himanshu-Jain59](https://www.frontendmentor.io/profile/Himanshu-Jain59)
-- LInkedIn - [@yourusername](https://www.twitter.com/yourusername)
+- LInkedIn - [Himanshu Jain](https://www.linkedin.com/in/himanshu-jain-931a74347/)
 
 ## Acknowledgments
 
